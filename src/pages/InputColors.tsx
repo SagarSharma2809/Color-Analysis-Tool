@@ -3,7 +3,10 @@ import { useState } from "react";
 import Button from "../components/Button";
 import PreferenceDiv from "../components/PreferenceDiv";
 
-export default function InputColors() {
+interface InputColorsProps {
+    imageData: string
+}
+export default function InputColors({ imageData }: InputColorsProps) {
 
     const [skinColor, setSkinColor] = useState<string | undefined>('');
     const [hairColor, setHairColor] = useState<string | undefined>('');
@@ -61,7 +64,7 @@ export default function InputColors() {
                     <div className="flex flex-col items-center" onSubmit={generatePalette}>
 
                         <div className="my-4 flex items-center w-full relative">
-                            <img src="/img/input image.jpeg" className="w-[40rem] h-[28rem] object-cover" alt="" />
+                            <img src={imageData} className="w-[40rem] h-[28rem] object-cover" alt="" />
                             <div className="absolute right-0">
                                 <div className="flex flex-col gap-6">
                                     <div className="flex flex-col items-center relative">
