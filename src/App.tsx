@@ -1,11 +1,11 @@
 
-import './App.css'
+import InputColors from "./pages/InputColors"
 
 function App() {
 
   return (
     <>
-      <h1 className='text-blue-500 font-bold'>Radhe Radhe</h1>
+      <InputColors />
     </>
   )
 }

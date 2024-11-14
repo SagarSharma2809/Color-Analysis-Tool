@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+    @font-face {
+        font-family: 'Playfair Display';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/playfairdisplay/v27/nuFiD-vYSZviVYUb_rj3ij__anPXDTzYhEYQ.woff2') format('woff2');
+    }
+
+    @font-face {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-display: swap;
+        src: url('https://fonts.gstatic.com/s/inter/v12/UcCnHi28Qpn8gA4a73ro7w8.woff2') format('woff2');
+    }
+}
