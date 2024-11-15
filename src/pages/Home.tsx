@@ -108,7 +108,7 @@ export default function Home({ uploadFile }: HomeProps) {
 
                 </div>
                 <div className="xl:w-1/2">
-                    <img src="/img/hero bg.jpeg" alt="" />
+                    <img src="/img/hero bg.jpeg" className="h-full" alt="" />
                 </div>
 
             </div>
