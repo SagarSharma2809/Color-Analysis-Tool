@@ -1,12 +1,12 @@
 export default function ColorBox({ colorData }: any) {
     return (
         <>
-            <div className="flex flex-col w-1/6 mr-3 mb-6">
+            <div className="flex flex-col w-44 md:w-1/4 lg:w-1/5 xl:w-1/6 lg:mr-3 mb-6">
                 <div
                     style={{
                         backgroundColor: colorData.hex_code
                     }}
-                    className="h-[200px] w-[188.8px]"
+                    className="h-[150px] w-[176px] xl:h-[200px] xl:w-[188.8px]"
                 >
                 </div>
                 <div className="flex flex-col gap-2">
