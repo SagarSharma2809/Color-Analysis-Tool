@@ -7,7 +7,7 @@ interface HomeProps {
 }
 export default function Home({ uploadFile }: HomeProps) {
 
-    const [isDragOver, setIsDragOver] = useState(false);
+
     const [droppedFileName, setDroppedFileName] = useState('');
     const [file, setFile] = useState('');
 
@@ -20,19 +20,20 @@ export default function Home({ uploadFile }: HomeProps) {
 
     const handleDragOver = (event: any) => {
         event.preventDefault();
-        setIsDragOver(true);
+
     };
 
     const handleDragLeave = () => {
-        setIsDragOver(false);
+        console.log("drag left")
     };
 
     const handleDrop = (event: any) => {
         event.preventDefault();
-        setIsDragOver(false);
-        const droppedFile = event.dataTransfer.files[0];
+
+        const droppedFile = (URL.createObjectURL(event.dataTransfer.files[0]));
+
         setFile(droppedFile)
-        setDroppedFileName(droppedFile.name);
+        setDroppedFileName(event.dataTransfer.files[0].name);
     };
 
     const createPalette = () => {
