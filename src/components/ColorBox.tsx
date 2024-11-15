@@ -10,7 +10,7 @@ export default function ColorBox({ colorData }: any) {
                 >
                 </div>
                 <div className="flex flex-col gap-2">
-                    <div>
+                    <div className="my-1">
                         <h3 className="text-lg text-[#0C111D] font-bold font-inter">{colorData.color_name}</h3>
                         {colorData.usage &&
                             <p className="font-inter text-sm font-[500] text-[#344054]">{colorData.usage.charAt(0).toUpperCase() + colorData.usage.slice(1)}</p>

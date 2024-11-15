@@ -14,7 +14,6 @@ export default function Home({ uploadFile }: HomeProps) {
     const navigate = useNavigate();
 
     const handleChange = (e: any) => {
-        console.log(e.target.files);
         setFile(URL.createObjectURL(e.target.files[0]));
         setDroppedFileName(e.target.files[0].name);
     }
@@ -48,15 +47,15 @@ export default function Home({ uploadFile }: HomeProps) {
     }
     return (
         <>
-            <div className="flex">
-                <div className="w-1/2 flex justify-center items-center bg-[#F8F7F4]">
+            <div className=" flex flex-col xl:flex-row">
+                <div className="w-full xl:w-1/2 flex justify-center items-center bg-[#F8F7F4] pb-12 pt-24 xl:pt-4 xl:pb-4">
 
                     <div className="w-5/6 flex items-center justify-center">
 
                         <div className="flex flex-col gap-6">
-                            <div className="flex flex-col gap-12">
+                            <div className="flex flex-col gap-16 md:gap-12">
 
-                                <h1 className="text-[4.1rem] text-[#0C111D] font-playfair font-[400] h-[60px]">Personal Color Analysis</h1>
+                                <h1 className="text-5xl lg:text-[3.1rem] xl:text-[4.1rem] text-[#0C111D] font-playfair font-[600] lg:font-[400] h-[60px]">Personal Color Analysis</h1>
 
 
                                 <div className="flex flex-col gap-6 text-[#475467] text-2xl">
@@ -107,7 +106,7 @@ export default function Home({ uploadFile }: HomeProps) {
 
 
                 </div>
-                <div className="w-1/2">
+                <div className="xl:w-1/2">
                     <img src="/img/hero bg.jpeg" alt="" />
                 </div>
 

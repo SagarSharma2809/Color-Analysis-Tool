@@ -42,11 +42,11 @@ export default function PreferenceDiv({ heading, desc, options, handleClick }: P
 
     return (
         <>
-            <div className="font-inter flex flex-col gap-2">
-                <h2 className="text-lg text-[#101828] font-[600]">{heading}</h2>
-                <p className="text-gray-500 text-sm">{desc}</p>
+            <div className="font-inter flex flex-col gap-2 w-full">
+                <h2 className="text-xl text-[#101828] font-[600]">{heading}</h2>
+                <p className="text-gray-500 text-md">{desc}</p>
                 <Divider />
-                <div className="flex gap-2">
+                <div className="flex gap-2 flex-wrap">
                     {
                         options.map((item, index) => {
                             return <Option key={index} text={item} buttonClick={manageOption} isActive={values[index]} index={index} />

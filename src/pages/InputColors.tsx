@@ -59,7 +59,7 @@ export default function InputColors({ imageData, handleData }: InputColorsProps)
     return (
         <div>
             <div className="flex flex-col items-center bg-[#F8F7F4]">
-                <div className="flex flex-col w-1/2 my-8">
+                <div className="flex flex-col lg:w-3/4 xl:w-1/2 my-8 mx-8">
                     <div>
                         <h1 className="text-4xl font-bold text-[#0C111D] font-playfair my-4">Select Your Colors</h1>
                         <p className="font-inter text-[#475467]">Use the color picker tool to identify your hair, skin, and eye colors. For hair and skin, choose the primary tones without focusing on highlights or shadows. For eyes, select the most prominent color, typically found in the center of the iris.</p>
@@ -68,7 +68,7 @@ export default function InputColors({ imageData, handleData }: InputColorsProps)
                     <div className="flex flex-col items-center" onSubmit={generatePalette}>
 
                         <div className="my-4 flex items-center w-full relative">
-                            <img src={imageData} className="w-[40rem] h-[28rem] object-cover" alt="" />
+                            <img src={imageData} className="w-4/5 lg:w-[40rem] h-[28rem] object-cover" alt="" />
                             <div className="absolute right-0">
                                 <div className="flex flex-col gap-6">
                                     <div className="flex flex-col items-center relative">
@@ -129,7 +129,7 @@ export default function InputColors({ imageData, handleData }: InputColorsProps)
                             </div>
                         </div>
 
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <Button text="Generate Palette" handleClick={generatePalette} />
                         </div>
 
@@ -143,12 +143,12 @@ export default function InputColors({ imageData, handleData }: InputColorsProps)
 
 
             <div className="flex flex-col items-center">
-                <div className="flex flex-col w-1/2 mb-8">
-                    <h1 className="text-3xl font-playfair font-medium my-8 text-[#344054]">Advanced Preferences - Optional</h1>
+                <div className="flex flex-col w-5/6 lg:w-3/4 xl:w-1/2 mb-8 gap-4">
+                    <h1 className="text-2xl lg:text-3xl font-playfair font-[500] lg:font-medium  my-2 lg:my-8 text-[#344054]">Advanced Preferences - Optional</h1>
 
                     <div className="flex flex-col gap-8 items-center">
 
-                        <div className="flex flex-col self-start gap-10">
+                        <div className="flex flex-col self-start gap-10 w-full">
                             <PreferenceDiv heading="Color Intensity Preference" desc="Defines the intensity and vibrancy of the colors in the palette." options={["Bold", "Vibrant", "Muted", "Pastel", "Soft", "Neutral", "Classic", "Dark", "Earthy", "Warm"]} handleClick={getPreference} />
 
 
@@ -160,7 +160,7 @@ export default function InputColors({ imageData, handleData }: InputColorsProps)
                         </div>
 
 
-                        <div className="w-1/2">
+                        <div className="w-full lg:w-1/2">
                             <Button text="Generate Palette" handleClick={generatePalette} />
                         </div>
 
