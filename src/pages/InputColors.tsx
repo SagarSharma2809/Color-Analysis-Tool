@@ -2,17 +2,19 @@ import axios from "axios"
 import { useState } from "react";
 import Button from "../components/Button";
 import PreferenceDiv from "../components/PreferenceDiv";
+import { useNavigate } from "react-router-dom";
 
 interface InputColorsProps {
-    imageData: string
+    imageData: string,
+    handleData: (obj: any) => void
 }
-export default function InputColors({ imageData }: InputColorsProps) {
+export default function InputColors({ imageData, handleData }: InputColorsProps) {
 
     const [skinColor, setSkinColor] = useState<string | undefined>('');
     const [hairColor, setHairColor] = useState<string | undefined>('');
     const [eyeColor, setEyeColor] = useState<string | undefined>('');
     const [preference, setPreference] = useState<string[]>([]);
-
+    const navigate = useNavigate();
 
 
     const generatePalette = async () => {
@@ -39,7 +41,9 @@ export default function InputColors({ imageData }: InputColorsProps) {
         const response = await axios.post('https://807l4.wiremockapi.cloud/thing/8/color-analysis', data);
 
         if (response) {
-            console.log(response.data);
+            const obj = response.data;
+            handleData(obj);
+            navigate('/outputColors');
         }
         else {
             console.log("error in submitting data to api");
